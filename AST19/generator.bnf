@@ -1,0 +1,18 @@
+<start>             ::= <rule> <rule_end> | <first_rule> <start>
+<first_rule>        ::= <rule> <rule_end>
+<rule>              ::= <atom> <entailments> | <implications> <atom> | <implies> <atom> | 'x1' | 'x2' | 'x3' | 'Assumption1' | 'Assumption2' | 'Assumption3' | 'false'
+<entailments>       ::= <entails> <atom_list>
+<implications>      ::= <atom_list> <implies>
+<atom_list>         ::= <atom> <atom_list_rest> | <id> <opt_args> | 'x1' | 'x2' | 'x3' | 'Assumption1' | 'Assumption2' | 'Assumption3' | 'false'
+<atom_list_rest>    ::= <separator> <atom_list>
+<atom>              ::= <id> <opt_args> | 'x1' | 'x2' | 'x3' | 'Assumption1' | 'Assumption2' | 'Assumption3' | 'false'
+<opt_args>          ::= <open_paranthesis> <close_paranthesis> | <open_paranthesis> <args>
+<args>              ::= <atom_list> <close_paranthesis>
+<open_paranthesis>  ::= '('
+<close_paranthesis> ::= ')'
+<id>                ::= 'x1' | 'x2' | 'x3' | 'Assumption1' | 'Assumption2' | 'Assumption3' | 'false'
+<separator>         ::= ','
+<entails>           ::= ':-'
+<implies>           ::= '->'
+<rule_end>          ::= '.\n'
+
