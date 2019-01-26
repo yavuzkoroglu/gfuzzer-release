@@ -44,7 +44,7 @@ Usage: perl gFuzzer.pl <GGF> <RGF> <RUT> "<PUT>" "<FM>" [mutate]
 [bc][5] is a known precision-calculator utility. Execute the following command from the main directory to generate, execute, and evaluate tests for 10 seconds.
 
 ```
-timeout 10 perl gFuzzer.pl examples/bc.bnf examples/bc.bnf start "bc -sql" "(standard_in)" 2&>0
+timeout 10 perl gFuzzer.pl examples/bc.bnf examples/bc.bnf start "bc -sql " "(standard_in)" 2&>0
 ```
 
 For using `timeout` command in Mac OS X, please check [Timeout Command on Mac OS X?][6].
@@ -66,7 +66,27 @@ cat passed.tests | grep -e "--" | wc -l
 
 Depending on your system, *gFuzzer* may generate more than a hundred tests per second.
 
-### Replicating Our Research
+### Reproducing Our Experiments
+
+Test inputs generated during our research can be found under `AST19/gfuzzer` and `AST19/mgfuzzer` directories.
+
+During experiments, we used the following parameters for *gfuzzer*.
+
+**GGF :** `AST19/generator.bnf`
+
+**RGF :** `AST19/recognizer.bnf`
+
+**RUT :** `start`
+
+**PUT :** `"java -jar AST19/ATMS.jar "`
+
+**FM :** `"Compile Failed"`
+
+**mutate :** We used this keyword to switch between *gfuzzer* and *mgfuzzer*.
+
+Note that we used Java version "1.8.0_112" during experiments. 
+
+Please feel free to contact us if you are unable to reproduce
 
 [1]: https://www.google.com
 [2]: https://en.wikipedia.org/wiki/Chomsky_normal_form
