@@ -3,7 +3,7 @@ Grammar Fuzzer (gfuzzer): Fully Automated Test Generation, Execution, and Evalua
 
 *gfuzzer* is a fully automated test generation, execution, and evaluation tool developed for compiler testing of reasoning engines.
 
-*gfuzzer* is developed at and copyrighted on [Institute of Software Technology][7] at [Graz University of Technology][8] under GNU General Public License v3.0. See `COPYRIGHT.md` and `LICENSE` for details.
+*gfuzzer* is developed at and copyrighted on [Institute of Software Technology][7] at [Graz University of Technology][8] under GNU General Public License v3.0. See the copyright notice at the end of this document for details.
 
 More information on the details of *gfuzzer* can be found in our paper, Fully Automated Compiler Testing of a Reasoning Engine via Mutated Grammar Fuzzing.
 
@@ -91,6 +91,27 @@ During experiments, we used the following parameters for *gfuzzer*.
 Note that we used Java version "1.8.0_112" during experiments. 
 
 Please feel free to contact us if you are unable to reproduce the experiments.
+
+### Copyright Notice
+
+gfuzzer: Fully Automated Test Generation, Execution, and Evaluation Tool
+Copyright (C) 2019 Institute for Software Technology at Graz University of Technology
+
+gfuzzer is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+gfuzzer is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with gfuzzer. If not, see <https://www.gnu.org/licenses/>.
+
+* **mail:** ykoerogl@ist.tugraz.at
+* **address:** Inffeldgasse 16b/II, 8010 Graz/AUSTRIA
 
 [1]: https://www.google.com
 [2]: https://en.wikipedia.org/wiki/Chomsky_normal_form
