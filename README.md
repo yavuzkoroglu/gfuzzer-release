@@ -44,7 +44,7 @@ Usage: perl gFuzzer.pl <GGF> <RGF> <RUT> "<PUT>" "<FM>" [mutate]
 [bc][5] is a known precision-calculator utility. Execute the following command from the main directory to generate, execute, and evaluate tests for 10 seconds.
 
 ```
-timeout 10 perl gFuzzer.pl examples/bc.bnf examples/bc.bnf start "bc -sql " "(standard_in)" 2&>0
+timeout 10 perl gFuzzer.pl examples/bc.bnf examples/bc.bnf start "bc -sql " "(standard_in)"
 ```
 
 For using `timeout` command in Mac OS X, please check [Timeout Command on Mac OS X?][6].
@@ -54,14 +54,18 @@ If the command is executed successfully, two files will be generated in the main
 1. *passed.tests*
 2. *failed.tests*
 
-*failed.tests* should be empty because all test inputs should be valid and we assume that [bc][5] works correctly.
-
-You can view *passed.tests* file to see the generated test inputs. Each test input is separated by a line.
+You can view these files to see the generated test inputs. Each test input is separated by a line.
 
 This allows to count the number of passed tests as follows.
 
 ```
 cat passed.tests | grep -e "--" | wc -l
+```
+
+You can also count the number of failed tests as follows.
+
+```
+cat failed.tests | grep -e "--" | wc -l
 ```
 
 Depending on your system, *gFuzzer* may generate more than a hundred tests per second.
@@ -86,7 +90,7 @@ During experiments, we used the following parameters for *gfuzzer*.
 
 Note that we used Java version "1.8.0_112" during experiments. 
 
-Please feel free to contact us if you are unable to reproduce
+Please feel free to contact us if you are unable to reproduce the experiments.
 
 [1]: https://www.google.com
 [2]: https://en.wikipedia.org/wiki/Chomsky_normal_form

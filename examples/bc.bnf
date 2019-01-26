@@ -1,5 +1,5 @@
 <start>         ::= <settings> <expr>
-<settings>      ::= 'scale=3;'
+<settings>      ::= 'scale=3;\n'
 <expr>          ::= <open_par> <inner_expr> | <unary_op> <expr> | <expr> <second_expr> | <decimal> <fractal> | <dot> <decimal> | <digit> <decimal> | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
 <open_par>      ::= '('
 <inner_expr>    ::= <expr> <close_par>

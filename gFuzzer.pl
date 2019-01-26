@@ -92,7 +92,7 @@ sub showLicense {
 #
 sub showUsage {
 	say '';
-	say "$0 version 1901.24";
+	say "$0 version 1901.26";
 	say '';
 	say "\tUsage: $0 <Generator-Grammar-File> <Recognizer-Grammar-File> <RuleUnderTest> \"<ParserUnderTest>\" \"<FailMessage>\" [mutate]";
 	say '';
@@ -203,7 +203,7 @@ sub main {
 		
 		my $testInput = fuzzRule(($mgFuzzer ? \%mutatedGrammar : \%originalGrammar), $ruleUnderTest, $maxSymbols);
 		
-		my $parserOutput = `echo '$testInput' | $parserUnderTest`;
+		my $parserOutput = `echo '$testInput' | $parserUnderTest 2>&1`;
 		
 		my $recognizerOutput = 'Recognizable';
 		if ($mgFuzzer) {
@@ -223,13 +223,11 @@ sub main {
 				say PASSEDTESTS $testInput;
 				say PASSEDTESTS "-------------------------------------";
 			} else {
-				say "1 => $parserOutput ?=? $recognizerOutput";
 				$nFailed++;
 				say FAILEDTESTS $testInput;
 				say FAILEDTESTS "-------------------------------------";
 			}
 		} elsif ($recognizerOutput =~ /Unrecognizable/) {
-				say "2 => $parserOutput ?=? $recognizerOutput";
 				$nFailed++;
 				say FAILEDTESTS $testInput;
 				say FAILEDTESTS "-------------------------------------";
