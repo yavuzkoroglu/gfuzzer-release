@@ -5,7 +5,7 @@ Grammar Fuzzer (gfuzzer): Fully Automated Test Generation, Execution, and Evalua
 
 *gfuzzer* is developed at and copyrighted on [Institute of Software Technology][7] at [Graz University of Technology][8] under GNU General Public License v3.0. See `COPYRIGHT.md` and `LICENSE` for details.
 
-More information on the details of *gfuzzer* can be found in our paper, [Fully Automated Compiler Testing of a Reasoning Engine via Mutated Grammar Fuzzing][1].
+More information on the details of *gfuzzer* can be found in our paper, Fully Automated Compiler Testing of a Reasoning Engine via Mutated Grammar Fuzzing.
 
 ### System Requirements
 
