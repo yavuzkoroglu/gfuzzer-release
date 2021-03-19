@@ -120,4 +120,4 @@ along with gfuzzer. If not, see <https://www.gnu.org/licenses/>.
 [7]: http://www.ist.tugraz.at
 [8]: https://www.tugraz.at
 [9]: https://www.cmpe.boun.edu.tr/~yavuz.koroglu/AST19/
-[10]: https://www.cmpe.boun.edu.tr/~yavuz.koroglu/publications/PID5819409.pdf
+[10]: https://www.cmpe.boun.edu.tr/~yavuz.koroglu/publications/AST19.pdf
