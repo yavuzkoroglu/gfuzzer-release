@@ -18,9 +18,10 @@
 #   You should have received a copy of the GNU General Public License
 #   along with gfuzzer.  If not, see <https://www.gnu.org/licenses/>.
 #
-#   mail: ykoerogl@ist.tugraz.at 
+#   mail: ykoerogl@ist.tugraz.at
 #   address: Inffeldgasse 16b/II, 8010 Graz/AUSTRIA
 #
+use lib '.';
 use warnings; no warnings 'once'; no warnings 'recursion';
 use strict;
 use autodie;
